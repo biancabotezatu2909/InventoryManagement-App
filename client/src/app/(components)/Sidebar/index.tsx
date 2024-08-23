@@ -83,13 +83,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <Image
-        src = {logo}
-        alt="sortify-logo"
-        width={27}
-        height={27}
-        
-        />
+         <Image
+          src="https://s3-inventory-management-b.s3.eu-north-1.amazonaws.com/logo.png"
+          alt="sortify-logo"
+          width={27}
+          height={27}
+          className="rounded-full h-full object-cover"
+          />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"

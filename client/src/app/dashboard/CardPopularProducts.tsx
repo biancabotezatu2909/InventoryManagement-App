@@ -2,6 +2,7 @@ import { useGetDashboardMetricsQuery } from '@/state/api'
 import { ShoppingBag } from 'lucide-react';
 import React from 'react'
 import Rating from '../(components)/Rating';
+import Image from 'next/image';
 
 
 const CardPopularProducts = () => {
@@ -27,7 +28,13 @@ const CardPopularProducts = () => {
                     className = "flex items-center justify-between gap-3 px-5 py-7 border-b">
                         <div className="flex items gap-3">
                         {/*LEFT SIDE OF THE PRODUCT*/}
-                        <div>img</div>
+                        <Image
+                             src={`https://s3-inventory-management-b.s3.eu-north-1.amazonaws.com/product${Math.floor(Math.random() * 3)+1}.png`}
+                             alt={product.name}
+                             width={48}
+                             height={48}
+                             className="rounded-lg w-14 h-14"
+                             />
                         <div className= "flex flex-col justify-between gap-1">
                             <div className="font-bold text-gray-700">
                                 {product.name}
